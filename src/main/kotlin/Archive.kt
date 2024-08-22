@@ -4,5 +4,5 @@ class Archive(val name: String) {
         notes.add(note)
     }
 
-    fun getNotes(): MutableList<Note> = notes
+    fun getNotes(): List<Note> = notes
 }

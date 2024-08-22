@@ -5,19 +5,14 @@ fun main(args: Array<String>) {
     archiveMenu.menu()
 }
 
-class Main() {
-    companion object {
-        val scanner = Scanner(System.`in`)
-        val archives: MutableList<Archive> = mutableListOf()
-    }
-}
+val scanner = Scanner(System.`in`)
+val archives: MutableList<Archive> = mutableListOf()
 
 fun checkEmptyInput(): String {
     var input: String
     while (true) {
-        input = Main.scanner.nextLine()
-        if (input.isNotEmpty()) return input
-        println("Вы ничего не ввели. Повторите ввод")
+        input = scanner.nextLine().trim()
+        if (input.isNotEmpty()) return input else println("Вы ничего не ввели. Повторите ввод")
     }
 }
 

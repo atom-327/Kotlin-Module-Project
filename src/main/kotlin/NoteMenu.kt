@@ -2,7 +2,7 @@ class NoteMenu {
     fun menu(archive: Archive) {
         while (true) {
             println("Меню заметок:\n1. Создать заметку\n2. Открыть уже существующую заметку\n3. Выход")
-            when (val input = Main.scanner.nextLine().toIntOrNull()) {
+            when (val input = scanner.nextLine().toIntOrNull()) {
                 1 -> {
                     println("Введите имя новой заметки:")
                     val name = checkEmptyInput()
